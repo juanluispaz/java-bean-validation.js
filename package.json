@@ -1,0 +1,81 @@
+{
+  "name": "java-bean-validation.js",
+  "version": "2.0.0",
+  "description": "Java Bean Validation implementation for JavaScript",
+  "main": "dist/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^21.1.0",
+    "ts-jest": "^21.0.1",
+    "cloc": "^2.2.0",
+    "typescript": "^2.5.2"
+  },
+  "devComments": {
+    "comment": "to add dependency to type definition of jest",
+    "tsconfig": {
+      "lib": [
+        "ES6"
+      ]
+    },
+    "@types/jest": "^21.1.0"
+  },
+  "scripts": {
+    "build": "rm -Rf dist && tsc --pretty",
+    "test": "jest",
+    "test-coverage": "jest --coverage",
+    "test-pro": "NODE_ENV=production jest",
+    "test-pro-coverage": "NODE_ENV=production jest --coverage",
+    "cloc": "cloc . --exclude-dir=node_modules",
+    "cloc-src": "cloc src",
+    "cloc-test": "cloc test",
+    "cloc-dist": "cloc dist",
+    "clean-js": "find test -name '*.js' -delete; find src -name '*.js' -delete"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juanluispaz/ejb.js.git"
+  },
+  "keywords": [
+    "EJB",
+    "JBV",
+    "Java",
+    "Bean",
+    "Validation",
+    "typescript"
+  ],
+  "author": {
+    "name": "Juan Luis Paz Rojas",
+    "url": "http://github.com/juanluispaz"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juanluispaz/jbv.js/issues"
+  },
+  "homepage": "https://github.com/juanluispaz/jbv.js",
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/"
+    ],
+    "testRegex": "/test/.*\\.spec\\.(ts|tsx|js)$",
+    "mapCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/"
+    ]
+  },
+  "jest2": {
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "testRegex": "/dist/test/.*\\.spec\\.js$"
+  }
+}
